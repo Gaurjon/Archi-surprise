@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for Archi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            font-family: 'Fredoka One', cursive;
+            text-align: center;
+            padding-top: 50px;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .question-box {
+            background-color: #ff4757;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 28px;
+            box-shadow: 0px 0px 15px white;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .btn {
+            background-color: #2ed573;
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #1dd1a1;
+        }
+        .hidden {
+            display: none;
+            font-size: 28px;
+            color: #feca57;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Among Us character animation */
+        .crewmate {
+            position: absolute;
+            width: 80px;
+            height: auto;
+            animation: float 5s infinite alternate ease-in-out;
+        }
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-30px); }
+        }
+        .crewmate1 { top: 10%; left: 10%; animation-delay: 0s; }
+        .crewmate2 { top: 30%; right: 15%; animation-delay: 1s; }
+        .crewmate3 { bottom: 10%; left: 30%; animation-delay: 2s; }
+        .crewmate4 { bottom: 20%; right: 25%; animation-delay: 3s; }
+    </style>
+</head>
+<body>
+
+    <!-- Among Us Background Music -->
+    <audio autoplay loop>
+        <source src="https://vgmsite.com/soundtracks/among-us-official-soundtrack/irvrdfbxvl/01.%20Among%20Us%20Theme.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <div class="question-box">Do you love me? ❤️</div>
+        <div class="buttons">
+            <button class="btn" onclick="showMessage()">Yes</button>
+            <button class="btn" onclick="showMessage()">Yes</button>
+        </div>
+        <div id="message" class="hidden">I love you too Archi! ❤️ Happy 6 months anniversary to us! 🚀</div>
+    </div>
+
+    <!-- Among Us Characters -->
+    <img src="https://static.wikia.nocookie.net/among-us-wiki/images/d/d0/Red.png" class="crewmate crewmate1">
+    <img src="https://static.wikia.nocookie.net/among-us-wiki/images/6/69/Blue.png" class="crewmate crewmate2">
+    <img src="https://static.wikia.nocookie.net/among-us-wiki/images/9/9a/Yellow.png" class="crewmate crewmate3">
+    <img src="https://static.wikia.nocookie.net/among-us-wiki/images/5/5d/Green.png" class="crewmate crewmate4">
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
